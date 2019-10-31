@@ -32,7 +32,6 @@ You should have received a copy of the GNU General Public License along with thi
  String output = "";
  int ghostprotocollast = 0;
  int GhostIterate = 0;
- String check = "";
  const byte interruptPin = 2;
 volatile byte state = LOW;
 
@@ -51,7 +50,6 @@ void QuantumState() {
        int b = 9;
        numa += b; //quantum disruption
      }
-     check = numa;
    }
  }
 void setup() {
@@ -59,12 +57,10 @@ void setup() {
 pinMode(interruptPin, INPUT_PULLUP);
   attachInterrupt(digitalPinToInterrupt(interruptPin), QuantumState, HIGH);
  Serial.begin(9600);
- for (int a = 0; a < 100; a++) {
+ for (int a = 0; a < 1000; a++) {
    int b = random(0, 2);
    numa += b; //initialise test variable set
  }
- check = numa;
-
 }
 
 void loop() {
