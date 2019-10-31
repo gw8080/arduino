@@ -34,7 +34,7 @@ You should have received a copy of the GNU General Public License along with thi
  int GhostIterate = 0;
  const byte interruptPin = 2;
 volatile byte state = LOW;
-
+int integer = 8;
 
 void QuantumState() {
   state = !state;
@@ -42,7 +42,8 @@ void QuantumState() {
    //in this space time essentially does not exist And we can do big calculations 
    //in a fraction of the time, this function isn't classically called, yet the potential 
    //of it being called is enough for it to be able to send information forward And back along the time axis.
-   int integer = 8; //this is the string which is supposed to be sent via quantum disruptions through time And the multiverse
+   //this is the string which is supposed to be sent via quantum disruptions through time And the multiverse
+ 
    //supposed to implement crc32 to be able to verify the results once recieved...
 //   app.ShowPopup(integer);
    if (integer <= ghostprotocol * range) {
@@ -69,6 +70,11 @@ void loop() {
  //GATHER QUANTUM VARIABLES
  char data[] = {random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20)};
  char data2[] = {random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20),random(0, 20)};
+  
+     if (Serial.available()) {
+    int integer = Serial.read();
+  }
+   
    if (Do == 1) {
      Do2 = 1;
      if (qu == 1 && it == 0) {
