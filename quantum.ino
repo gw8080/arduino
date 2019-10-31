@@ -263,6 +263,7 @@ void loop() {
            ghostprotocol = 0;
            GhostIterate = 0;
            output = "******\n";
+           cyc = 0;
           Serial.println(output);
          }
        }
