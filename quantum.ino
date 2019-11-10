@@ -38,7 +38,7 @@ void QuantumState() {
    //of it being called is enough for it to be able to send information forward And back along the time axis.
    //this is the string which is supposed to be sent via quantum disruptions through time And the multiverse
    if (Serial.available()) {
-    integer = Serial.read();
+    integer = Serial.read();//predict serial input
   }
    //supposed to implement crc32 to be able to verify the results once recieved...
 //   app.ShowPopup(integer);
@@ -58,7 +58,7 @@ pinMode(interruptPin, INPUT_PULLUP);
    int b = random(0, 2);
    numa += b; //initialise test variable set
  }
- //Serial.println("Qubox C#, Arduino, Copyright 2019 George Wagenknecht");
+ Serial.println("Qubox C#, Arduino, Copyright 2019 George Wagenknecht");
  
 }
 
@@ -66,8 +66,8 @@ void loop() {
  //various switching
 
  //GATHER QUANTUM VARIABLES
- int data[] = {random(0, 20),random(0, 20),random(0, 20)};
- int data2[] = {random(0, 20),random(0, 20),random(0, 20)};
+ int data[] = {random(0, 20),random(0, 20)}; 
+ int data2[] = {random(0, 20),random(0, 20)}; // I wonder if this is too little amount of ldr's
   
  
    
@@ -86,14 +86,14 @@ void loop() {
  //more switching, this time, "test" alternates of each run of the camera data stream
     
 
-     for (int a = 0; a < 2; a++) {
+     for (int a = 0; a < 3; a++) {
        if (data[a] > 10) { //searching for motion intensity of data stream set
          b++; //counting initial spectra
         
        }
      }
      
-       for (int aa = 0; aa < 2; aa++) { //searching set two
+       for (int aa = 0; aa < 3; aa++) { //searching set two
          if (data[aa] > 10) {
            if (data2[aa] > data[aa] || data2[aa] < data[aa]) { 
              bb++; //counting them
@@ -245,16 +245,16 @@ void loop() {
          if (calc != ghostprotocollast + range) {
            ghostprotocollast = calc;
            output = ghostprotocol;
-           Serial.println(output);
+           //Serial.println(output);
          }
          if (calc == ghostprotocollast + range) {
            output = ghostprotocol;
            ghostprotocollast = ghostprotocol;
            ghostprotocol = 0;
            GhostIterate = 0;
-           output = "******\n";
+           //output = "******\n";
            cyc = 0;
-          Serial.println(output);
+          Serial.println(output);//predicts 'integer'
          }
        }
        ghostprotocol++; //This iterates multiverses supposedly...
