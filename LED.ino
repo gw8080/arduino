@@ -42,5 +42,5 @@ void loop() {
   if(step_number > 3){
     step_number = 0;
   }
-  delay(30);
+  delay(70);
   }
