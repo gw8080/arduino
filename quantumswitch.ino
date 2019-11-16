@@ -29,25 +29,29 @@
  const byte interruptPin = 2;
 volatile byte state = LOW;
 int integer = 8;
+bool Toggle = true;
+
+
 
 void QuantumState() {
-  state = !state;
+  int it = 0;
+  if (Toggle == true && it == 0) {
+       Toggle = false;
+       it++;
+     }
+     if (Toggle == false && it == 0) {
+       Toggle = true;
+       it++;
+     }
+     it = 0;
    //do calculation, efficiency does not matter so we can do it again And again.
    //in this space time essentially does not exist And we can do big calculations 
    //in a fraction of the time, this function isn't classically called, yet the potential 
    //of it being called is enough for it to be able to send information forward And back along the time axis.
    //this is the string which is supposed to be sent via quantum disruptions through time And the multiverse
-   if (Serial.available()) {
-    integer = Serial.read();//predict serial input
-  }
    //supposed to implement crc32 to be able to verify the results once recieved...
-//   app.ShowPopup(integer);
-   if (integer < ghostprotocol * range) {
-     for (int a = 0; a < 5; a++) {
-       int b = 9;
-       numa += b; //quantum disruption
-     }
-   }
+
+   
  }
 void setup() {
    randomSeed(analogRead(0));
@@ -58,7 +62,8 @@ pinMode(interruptPin, INPUT_PULLUP);
    int b = random(0, 2);
    numa += b; //initialise test variable set
  }
- Serial.println("Qubox C#, Arduino, Copyright 2019 George Wagenknecht");
+ String check = numa;
+// Serial.println("Qubox C#, Arduino, Copyright 2019 George Wagenknecht");
  
 }
 
@@ -86,14 +91,14 @@ void loop() {
  //more switching, this time, "test" alternates of each run of the camera data stream
     
 
-     for (int a = 0; a < 3; a++) {
+     for (int a = 0; a < 2; a++) {
        if (data[a] > 10) { //searching for motion intensity of data stream set
          b++; //counting initial spectra
         
        }
      }
      
-       for (int aa = 0; aa < 3; aa++) { //searching set two
+       for (int aa = 0; aa < 2; aa++) { //searching set two
          if (data[aa] > 10) {
            if (data2[aa] > data[aa] || data2[aa] < data[aa]) { 
              bb++; //counting them
@@ -153,7 +158,7 @@ void loop() {
 
      b = 0;
      bb = 0;
-
+if (Toggle == true){
    if (And > Or) {
      //Serial.print(" And");
      //Serial.println(And);
@@ -167,7 +172,7 @@ void loop() {
        nul++;
        And = 0;
        cyc++;
-       prime = 0;
+       Serial.println("0");
      }
      //most of the time it knows the number before it matches...
      check = numa[cyc];
@@ -190,10 +195,11 @@ void loop() {
        And = 0;
        Or = 0;
        cyc++;
-       prime = 0;
+       Serial.println("0");
      }
    }
-
+}
+if (Toggle == true){
    if (Or > And) {
       
 //Serial.print(" Or");
@@ -220,7 +226,7 @@ void loop() {
        swi2++;
        Or = 0;
        cyc++;
-       prime = 0;
+       Serial.println("0");
      }
      check = numa[cyc];
      if (check != qu) { 
@@ -234,30 +240,8 @@ void loop() {
        Or = 0;
        And = 0;
        cyc++;
-      //Serial.println(ghostprotocol);
-       prime++;
-       int calc = (ghostprotocol * range);
-       if (prime > 1 && ghostprotocol > 3) {
-         if (GhostIterate == 0) {
-           ghostprotocollast = ghostprotocol;
-           GhostIterate++;
-         }
-         if (calc != ghostprotocollast + range) {
-           ghostprotocollast = calc;
-           output = ghostprotocol;
-           Serial.println(output);
-         }
-         if (calc == ghostprotocollast + range) {
-           output = ghostprotocol;
-           ghostprotocollast = ghostprotocol;
-           ghostprotocol = 0;
-           GhostIterate = 0;
-           output = "******\n";
-           cyc = 0;
-          Serial.println(output);//predicts 'integer'
-         }
-       }
-       ghostprotocol++; //This iterates multiverses supposedly...
+      Serial.println("1");
      }
    }
  }
+}
