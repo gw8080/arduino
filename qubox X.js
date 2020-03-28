@@ -354,8 +354,8 @@ rangenew += "0";
 str += "," + rangenew;
 //if decimal higher or lower send disruption
 app.ShowPopup(integer);
-
-var sink=  Math.floor(Math.random() * (2)) + 0; //without the sink activated the harmonic oscillation system collapses sooner
+var sinkrate = 20; // the sinkrate lower i.e @ 1 the harmonic oscillation system collapses sooner
+var sink=  Math.floor(Math.random() * (sinkrate)) + 0; 
 if (integer <= ghostprotocol*range && sink == 0  ){
 for(var a = 0; a < 500;a++){
 var b = 9;
