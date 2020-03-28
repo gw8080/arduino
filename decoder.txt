@@ -1,0 +1,37 @@
+check = numa[cyc];
+      if (check != qu) {
+        if (swi == longcyc) {
+          qu = random(0, 1);
+          swi = 0;
+        }
+        swi++;
+        Do = 1;
+        nul++;
+        Or = 0;
+        And = 0;
+        cyc++;
+        //Serial.println(ghostprotocol);
+        prime++;
+        int calc = (ghostprotocol * range);
+        if (prime > 1 && ghostprotocol > 3) {
+          if (GhostIterate == 0) {
+            ghostprotocollast = ghostprotocol;
+            GhostIterate++;
+          }
+          if (calc != ghostprotocollast + range) {
+            ghostprotocollast = calc;
+            output = ghostprotocol;
+            Serial.println(output);
+          }
+          if (calc == ghostprotocollast + range) {
+            output = ghostprotocol;
+            ghostprotocollast = ghostprotocol;
+            ghostprotocol = 0;
+            GhostIterate = 0;
+            output = "******\n";
+            cyc = 0;
+            Serial.println(output);//predicts 'integer'
+          }
+        }
+        ghostprotocol++; //This iterates multiverses supposedly...
+      }
