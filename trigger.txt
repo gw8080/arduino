@@ -1,0 +1,8 @@
+  integer = 100;
+    //do quantum physics
+    if (integer <= ghostprotocol * range) { //do quantum magic to determine integer
+        for (int a = 0; a < 500; a++) {
+            int b = 9;// 1 or 0
+            numa += b + ","; //quantum disruption
+        }
+    }
