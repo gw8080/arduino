@@ -69,20 +69,20 @@ function OnStart()
 	btnp = app.CreateButton( "Process", 0.3, 0.1 );
 	btnp.SetOnTouch(  btnp_OnTouch);
   btnp.SetMargins( 0.29, 0.02, 0, 0 );
-  lay.AddChild( btnp);
+ // lay.AddChild( btnp);
   
 
 	
-	edt = app.CreateTextEdit( "", 0.3, 0.7 ); 
+	edt = app.CreateTextEdit( "", 0.6, 0.7 ); 
 	edt.SetBackColor( "#333333" );
 	edt.SetTextSize(4);
-	edt.SetMargins( 0.6, 0.25, 0, 0 );
+	edt.SetMargins( 0.3, 0.25, 0, 0 );
 		lay.AddChild( edt ); 
 	edt2 = app.CreateTextEdit( "", 0.3, 0.7 ); 
 	edt2.SetBackColor( "#333333" );
 	edt2.SetTextSize(4);
 	edt2.SetMargins( 0.29, 0.25, 0, 0 );
-	lay.AddChild( edt2 ); 
+	//lay.AddChild( edt2 ); 
 	app.AddLayout( lay );
 	setTimeout( "StartDetection()", 1000 );  //initiate camera stream function
 }
