@@ -1,0 +1,77 @@
+//------------------
+    if (Toggle == true) {
+      if (And > Or) {
+        int check = numa[cyc];
+        if (check != qu) {
+          if (swi == longcyc) {
+            qu = random(0, 1);
+          }
+          swi++;
+          Do = 1;
+          nul++;
+          And = 0;
+          cyc++;
+        }
+        //most of the time it knows the number before it matches...
+        check = numa[cyc];
+        if (check == qu) {
+          ack++;
+          if (qu == 1 && it == 0) {
+            qu = 0;
+            it++;
+          }
+          if (qu == 0 && it == 0) {
+            qu = 1;
+            it++;
+          }
+          it = 0;
+          if (swi2 == longcyc2) {
+            qu = random(0, 1);
+            swi2 = 0;
+          }
+          swi2++;
+          And = 0;
+          Or = 0;
+        }
+      }
+    }
+    if (Toggle == true) {
+      if (Or > And) {
+        int check = numa[cyc];
+        //most of the time it knows the number before it matches...
+        if (check == qu) {
+          ack++;
+          if (qu == 1 && it == 0) {
+            qu = 0;
+            it++;
+          }
+          if (qu == 0 && it == 0) {
+            qu = 1;
+            it++;
+          }
+          it = 0;
+          if (swi2 == longcyc2) {
+            qu = random(0, 1);
+            it = 0;
+            swi2 = 0;
+          }
+          swi2++;
+          Or = 0;
+          cyc++;
+        }
+        check = numa[cyc];
+        if (check != qu) {
+          if (swi == longcyc) {
+            qu = random(0, 1);
+            swi = 0;
+          }
+          swi++;
+          Do = 1;
+          nul++;
+          Or = 0;
+          And = 0;
+          cyc++;
+        }
+      }
+    }
+    //------------------

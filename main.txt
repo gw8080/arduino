@@ -1,0 +1,22 @@
+ int data = analogRead(A0);
+    for (pos = 50; pos <= 130; pos += 1) {
+      myservo.write(pos);
+      int data2 = analogRead(A1);
+      if (data2 >= data - 50) {
+        and ++; //counting them
+        break;
+      }
+      if (data2 < data + 50) {
+        or ++; //counting them
+        break;
+      }
+      delay(1);
+    }
+   //------------------------------------
+   //insert harmonic oscillator and
+   //programmatic observation switching
+   //------------------------------------
+    for (pos = 130; pos >= 50; pos -= 1) {
+      myservo.write(pos);
+      delay(5);
+    }
