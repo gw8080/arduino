@@ -6,7 +6,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 */
 
-var sinkrate = 500; // the sinkrate lower i.e @ 1 the harmonic oscillation system collapses sooner, this happens retrocausally
+var sinkrate = 0; // the sinkrate lower i.e @ 1 the harmonic oscillation system collapses sooner, this happens retrocausally
 var  url ="https://www.999dice.com/api/web.aspx";
 var spend = 10000; //1%
 var PayIn = spend;
@@ -33,7 +33,7 @@ var cyc = 0;
 var cycle = 0;
 var numa = "";
 var qu = 0;
-var rangeorig= 100000;
+var rangeorig= 1;
 var range = rangeorig;
 var ghostprotocol = 0;
 var prime = 0;
@@ -358,8 +358,8 @@ str += "," + rangenew;
 app.ShowPopup(integer);
 var sink=  Math.floor(Math.random() * (sinkrate)) + 0; 
 if (integer <= ghostprotocol*range && sink == 0  ){
-for(var a = 0; a < 500;a++){
-var b = 9;
+for(var a = 0; a < 50000;a++){
+var b = 0;
 numa += b + ",";//quantum disruption
 }
 check = numa.split(",");
