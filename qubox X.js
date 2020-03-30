@@ -6,7 +6,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 */
 
-var sinkrate = 80; // the sinkrate lower i.e @ 1 the harmonic oscillation system collapses sooner, this happens retrocausally
+var sinkrate = 500; // the sinkrate lower i.e @ 1 the harmonic oscillation system collapses sooner, this happens retrocausally
 var  url ="https://www.999dice.com/api/web.aspx";
 var spend = 10000; //1%
 var PayIn = spend;
@@ -181,7 +181,7 @@ or++;
 done = 1;
 }
 }
-if (and > corr){
+if (and > corr && and > or){
 var check = numa.split(",");
 check = numa.split(",");
 if (check[cyc] != qu){
@@ -222,7 +222,7 @@ cyc++;
 prime = 0;
 }
 }
-if (or > corr){
+if (or > corr && or > and){
 var check = numa.split(",");
 //most of the time it knows the number before it matches...
 if (check[cyc] == qu){
