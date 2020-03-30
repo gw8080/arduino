@@ -6,6 +6,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 */
 
+var sinkrate = 80; // the sinkrate lower i.e @ 1 the harmonic oscillation system collapses sooner, this happens retrocausally
 var  url ="https://www.999dice.com/api/web.aspx";
 var spend = 10000; //1%
 var PayIn = spend;
@@ -47,13 +48,14 @@ var L = 0;
 var qdata = 0;
 var safe = 1;
 var outputq = "";
-for(var a = 0; a < 100;a++){
+for(var a = 0; a < 10000;a++){
 var b =  Math.floor(Math.random() * (2)) + 0;
- numa += b + ",";//initialise test variable set
+ numa +="1,";//initialise test variable set
 }
 var check = numa.split(",");
 
 var outputcheck = "";
+
 function OnStart()
 {   
 	app.SetOrientation( "Landscape" );
@@ -75,12 +77,12 @@ function OnStart()
 	
 	edt = app.CreateTextEdit( "", 0.6, 0.7 ); 
 	edt.SetBackColor( "#333333" );
-	edt.SetTextSize(4);
+	edt.SetTextSize(6);
 	edt.SetMargins( 0.3, 0.25, 0, 0 );
 		lay.AddChild( edt ); 
 	edt2 = app.CreateTextEdit( "", 0.3, 0.7 ); 
 	edt2.SetBackColor( "#333333" );
-	edt2.SetTextSize(4);
+	edt2.SetTextSize(6);
 	edt2.SetMargins( 0.29, 0.25, 0, 0 );
 	//lay.AddChild( edt2 ); 
 	app.AddLayout( lay );
@@ -256,7 +258,7 @@ nul++;
 or = 0;
 and = 0;
 cyc++;
-app.ShowPopup("Ghost protocol++ ->" + ghostprotocol );
+//app.ShowPopup("Ghost protocol++ ->" + ghostprotocol );
 prime++;
 var calc = (ghostprotocol*range)+qdata;
 if (prime > 1){
@@ -274,7 +276,7 @@ ghostprotocollast = calc;
     timearr += "#"
     }
 timearr += "(" + spenttime +  ")";
-output += "~" + ghostprotocol*range + " == ?" + "  \t\t\t Work= " + timearr + "\n";
+output += "~" + ghostprotocol*range + " == ?" + "  \t\t\t Work= " + timearr + "\t SINKRATE = " + sinkrate + "\n";
 edt.SetText(output);
 }
 if(calc+qdata == ghostprotocollast+range+qdata)
@@ -296,7 +298,7 @@ ghostprotocol++;//This iterates multiverses supposedly...
 }
 function btn_OnTouch(){
 var now = new Date().getTime();
-app.SetAlarm( "Set", 1234, OnAlarm, now + 10 );
+app.SetAlarm( "Set", 1234, OnAlarm, now + 0 );
 }
 
 function btnp_OnTouch(){
@@ -354,7 +356,6 @@ rangenew += "0";
 str += "," + rangenew;
 //if decimal higher or lower send disruption
 app.ShowPopup(integer);
-var sinkrate = 20; // the sinkrate lower i.e @ 1 the harmonic oscillation system collapses sooner
 var sink=  Math.floor(Math.random() * (sinkrate)) + 0; 
 if (integer <= ghostprotocol*range && sink == 0  ){
 for(var a = 0; a < 500;a++){
