@@ -6,7 +6,7 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 */
 
-var sinkrate = 0; // the sinkrate lower i.e @ 1 the harmonic oscillation system collapses sooner, this happens retrocausally
+var sinkrate = 1000; // the sinkrate lower i.e @ 1 the harmonic oscillation system collapses sooner, this happens retrocausally
 var  url ="https://www.999dice.com/api/web.aspx";
 var spend = 10000; //1%
 var PayIn = spend;
