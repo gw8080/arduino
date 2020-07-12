@@ -1,2 +1,9 @@
-Automatic balancing using quantum temporal dynamics and programmatic observation
-auto adjust timing in a random binary system consisting of two unbalanced switching workloads. The device will favor one of the workloads until harmonisation occurs, then will satisfy the bell's theorem by more accuratly predicting a random binary number. future disabling or length modification of a workload affects the wavefunction retroactively and is evident in the algorithm precausally before the action is made, in controlled environments the device can guess a number provided there is a steadily rising variable to check against if specific conditions are true.
+I made some modifications to my quantum theory. Here it is.
+
+Automatic balancing using quantum temporal dynamics and programmatic observation.
+
+Auto adjust timing in a random binary system consisting of two unbalanced switching workloads. The device will favour one of the workloads until harmonisation occurs, then will satisfy the bell's theorem by more accurately predicting a random binary number. 
+
+Ghost protocol
+If a steadily rising variable is in sync of the main algorithm and a conditional statement in the second algorithm. If the second algorithm is called which alters the length of operation of the main algorithm, the main algorithm can guess an integer in memory via disruption in the harmonisation, with only a probability of calling the second algorithm.
+
