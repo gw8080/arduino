@@ -4,7 +4,7 @@ Photon path integral of a correlation and no correlation sets of constructive an
 
 Automatic balancing using quantum temporal dynamics and programmatic observation.
 
-Auto adjust timing in a random binary system consisting of two unbalanced switching workloads. The device will favour one of the workloads until harmonisation occurs, then will satisfy the bell's theorem by more accurately predicting a random binary number. 
+Auto adjust timing in a random binary system consisting of two unbalanced switching workloads. The device will favour one of the workloads until harmonisation occurs, then will satisfy the bell's theorem by more accurately predicting a random binary number if switching occurs. 
 
 Ghost protocol
 If a steadily rising variable is in sync of the main algorithm and a conditional statement in the second algorithm. If the second algorithm is called which alters the length of operation of the main algorithm, the main algorithm can guess an integer in memory via disruption in the harmonisation, with only a probability of calling the second algorithm.
