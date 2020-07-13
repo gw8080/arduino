@@ -1,8 +1,6 @@
 I made some modifications to my theory of a quantum processor via boson sampling. Here it is.
 
-
-Photon path integral of a correlation and no correlation sets occurring after measurement of spin decides what parts of a program of unbalanced switching workloads is activated using the photon detector to find the lesser intensity of switching before the program is activated triggers retroactive photonic changes if the switching only occurs when the temporary value does not match the random binary pattern,  disabling a workload fork causes changes the path integral retroactively yet the changes of the temporary value remains.the photon source will try to correct the temporary value to match the binary pattern using the additional value.
-
+Photon path integral of a correlation and no correlation sets of constructive and deconstructive interference occurring after measurement of spin decides what parts of a program of unbalanced switching workloads is activated using the photon detector to find the lesser intensity of switching before the program is activated triggers retroactive photonic changes if the switching only occurs when the temporary value does not match the random binary pattern,  disabling a workload fork causes changes the path integral retroactively yet the changes of the temporary value remains.the photon source will try to correct the temporary value to match the binary pattern using the additional value.
 
 Automatic balancing using quantum temporal dynamics and programmatic observation.
 
