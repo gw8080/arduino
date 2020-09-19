@@ -1,0 +1,5 @@
+quantum co-processor theory, updated, plausible...
+
+I speculate if future photons influence past photons via entanglement with two separate photon paths of different lengths, if the longest photon beam interacts with an observation tool close to the end of the path of the longer beam and exhibits retrocausal activity and the bilinear unification of wavefunction collapse transfers to the shorter beam, if the path's end for the shorter beam is after the double slit and before the observation tool of the longer beam and at the moment of the longer beam passing through the double slit, the retrocausal force is apparent in the shorter beam and depending on the binary configuration of the observation tool on the longer beam path. then there exists a clear utility for sensing future events in the shorter beam path.
+ 
+Then one could build a device where computer code controls the observation to eventually solve the halting problem non-deterministically, actually detect future binary events such as a result for High/Low dice.
